@@ -15,7 +15,11 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Desktop Application");
         primaryStage.setScene(new Scene(root, 700, 500));
-        primaryStage.show();    }
+        primaryStage.show();
+    }
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
 
 

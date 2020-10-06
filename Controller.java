@@ -25,9 +25,9 @@ public class Controller {
 
     @FXML
     private void handleButtonAction(ActionEvent event) throws Exception {
+        JavaMailTest.sendMail(mailSender.getText());
         passwordGetter.setDisable(false);
         logBtn.setDisable(false);
-
     }
 
 
