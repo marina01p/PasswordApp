@@ -1,0 +1,37 @@
+.root {
+    -fx-background-color: #f0f0f5;
+}
+
+#passBtn {
+    -fx-background-color:#a3a3c2, linear-gradient(#a3a3c2, #a3a3c2),linear-gradient(#a3a3c2, #a3a3c2), linear-gradient(#b3b3cc, #b3b3cc);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-font-weight: bold;
+    -fx-font-family: "Tahoma Web Safe Font";
+    -fx-text-fill: white;
+    -fx-font-size: 30px;}
+
+#logBtn {
+    -fx-background-color:#a3a3c2, linear-gradient(#a3a3c2, #a3a3c2),linear-gradient(#a3a3c2, #a3a3c2), linear-gradient(#b3b3cc, #b3b3cc);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-font-weight: bold;
+    -fx-font-family: "Tahoma Web Safe Font";
+    -fx-text-fill: white;
+    -fx-font-size: 15px;}
+
+#mailSender{
+    -fx-font-size: 25.0 pt;
+    -fx-font-family: "Tahoma Web Safe Font";
+    -fx-text-fill: #33334d;
+    -fx-padding: 2.0px;
+}
+
+#passwordGetter{
+    -fx-font-size: 25.0 pt;
+    -fx-font-family: "Tahoma Web Safe Font";
+    -fx-text-fill: #33334d;
+    -fx-padding: 2.0px;
+}

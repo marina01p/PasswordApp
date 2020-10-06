@@ -2,6 +2,9 @@ package sample;
 
 import javax.mail.Session;
 import javax.mail.Transport;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -9,12 +12,10 @@ import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-
 public class JavaMailTest {
     public static void sendMail(String recipient) throws Exception {
 
         System.out.println("Preparing to send Email");
-
         final String myAccountEmail = "getpass.app@gmail.com";
         final String password = "pz1lips-os";
 
@@ -37,14 +38,24 @@ public class JavaMailTest {
         System.out.println("Message Sent Successfully");
     }
 
-    private static Message prepareMessage(Session session, String myAccountEmail, String recipient) {
+    public static Message prepareMessage(Session session, String myAccountEmail, String recipient) {
 
         try {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(myAccountEmail));
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
             message.setSubject("Password Generator");
-            message.setText("Your password is: " + PassGenerator.random_Password(8));
+            String a = PassGenerator.getSaltString();
+            message.setText("Your Passwords is: " + a);
+
+            File file = new File("out.txt");
+            FileWriter fw = new FileWriter(file);
+            PrintWriter pw = new PrintWriter(fw);
+
+            pw.println(a);
+            pw.close();
+
+            System.out.println(a);
             return message;
 
         } catch (Exception ex) {
