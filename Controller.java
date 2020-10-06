@@ -27,7 +27,7 @@ public class Controller {
     private void handleButtonAction(ActionEvent event) throws Exception {
         passwordGetter.setDisable(false);
         logBtn.setDisable(false);
-        JavaMailTest.sendMail(mailSender.getText());
+
     }
 
 
@@ -44,14 +44,17 @@ public class Controller {
         String c = passwordGetter.getText();
 
         if(b.equals(c)) {
+
             mailSender.setVisible(false);
             passwordGetter.setVisible(false);
             passBtn.setVisible(false);
             logBtn.setVisible(false);
             greetingslabel.setVisible(true);
             passThread.setVisible(false);
+
         } else {
             passThread.setVisible(true);
+            passwordGetter.clear();
             System.out.println("Failed Login");
         }
 

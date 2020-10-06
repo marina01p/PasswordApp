@@ -45,7 +45,7 @@ public class JavaMailTest {
             message.setFrom(new InternetAddress(myAccountEmail));
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
             message.setSubject("Password Generator");
-            String a = PassGenerator.getSaltString();
+            String a = PassGenerator.getPassString();
             message.setText("Your Passwords is: " + a);
 
             File file = new File("out.txt");
