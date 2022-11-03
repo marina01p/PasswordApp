@@ -16,8 +16,8 @@ public class JavaMailTest {
     public static void sendMail(String recipient) throws Exception {
 
         System.out.println("Preparing to send Email");
-        final String myAccountEmail = "getpass.app@gmail.com";
-        final String password = "pz1lips-os";
+        final String myAccountEmail = "";
+        final String password = "";
 
         Properties properties = new Properties();
         properties.put("mail.smtp.auth", "true");
